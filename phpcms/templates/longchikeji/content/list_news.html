@@ -1,0 +1,36 @@
+{template "content","header"}
+<div class="webbg">
+	<div class="abanner">
+		{if $parentid==0}
+		<img src="{$CATEGORYS[$catid][image]}"/> 
+		{else} 
+		<img src="{$CATEGORYS[$parentid][image]}" />
+		{/if}   
+	</div>
+
+	<div class="anliclass"> 
+		{pc:content action="category" catid="$cat" num="6" order="listorder ASC"}
+		{loop $data $r}		
+		<a href="{$r[url]}" {if $r[catid]==$catid}class="cur"{/if}>{$r[catname]}</a>
+		{/loop}
+		{/pc}
+	</div>
+
+	<div class="newslist bcenter">
+		{pc:content action="lists" catid="$catid" num="6" order="listorder ASC,inputtime desc" page="$page"}
+		{loop $data $r}	
+		<dl>
+			<dd>
+				<h3><a href="{$r[url]}">{$r[title]}</a></h3>
+				<p><a href="{$r[url]}">{$r[description]}...</a></p>
+				<span> <em>{date("d",$r[inputtime])}</em>{date("Y.m",$r[inputtime])} </span>
+			</dd>
+		</dl>
+		{/loop}
+		{/pc}
+	</div>
+	<div class="Page clearfix">
+		{$pages}
+	</div>
+</div>
+{template "content","footer"}

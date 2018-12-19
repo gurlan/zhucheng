@@ -1,0 +1,501 @@
+/*网站基本定义*/
+div,form,img,ul,ol,li,dl,dt,dd,p,tr,td,body,strong,span,pre,input{margin:0; padding:0; border:0; background-repeat:no-repeat;}
+h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0; font-weight:normal;}
+body{font-family:"微软雅黑";font-size:12px;margin:0px;padding:0px;color:#333;line-height:24px;height:auto;clear:both; min-width:1200px; padding-top:100px;}
+img{border:0px;}
+ul,li{ list-style:none;}
+em,i{ font-style:normal;}
+a{ text-decoration:none; color:#333; outline:none;}
+.del_float{ clear:both; line-height:0; height:0; font-size:0;}
+a,area{blr:expression(this.onFocus=this.blur())}
+
+/*网站基本定义*/
+
+.clearfix:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+
+.bcenter{margin:0 auto;width:1180px;min-width:1180px;}
+
+/*---头部---*/
+.headerbg{position:fixed;top:0px;_position:absolute;_top:expression(documentElement.scrollTop + 0 + "px"); background:#fff; height:100px; width:100%; z-index:9999999; }
+.logo{float:left;}
+.logo img{ display:block;}
+
+.nav{float:right; width:784px;height:60px;overflow:hidden;}
+.nav ul{ margin:0px; padding:38px 0px 0px;}
+.nav ul li{float:left;}
+.nav ul li a{ display:inline-block; padding:0px 17px 0px; font-size:16px;color:#333;}
+.nav ul li a:hover{color:#e60012;}
+
+/*---banner图---*/
+.banner{position:relative;height:450px;overflow:hidden;background:url("../../images/images/loading.gif"/*tpa=http://wubaiyi.net/wby/16111/images/loading.gif*/) 50% no-repeat;}
+.slides{position:relative;z-index:1;}
+.slides li{height:580px;}
+.flex-control-nav{position:absolute;bottom:10px;z-index:2;width:100%;text-align:center;}
+.flex-control-nav li{display:inline-block;width:50px;height:3px;margin:0 5px;*display:inline;zoom:1;}
+.flex-control-nav a{display:inline-block;width:50px;height:3px;overflow:hidden;background:#fff;cursor:pointer;}
+.flex-control-nav .flex-active{background:#ff8400;}
+
+.flex-direction-nav{position:absolute;z-index:3;width:100%;top:45%;}
+.flex-direction-nav li a{display:block;width:50px;height:38px;overflow:hidden;cursor:pointer;position:absolute;filter:alpha(opacity=80); -moz-opacity:0.8; -khtml-opacity: 0.8; opacity: 0.8;}
+.flex-direction-nav li a.flex-prev{left:40px;background:url("../../images/images/prev_icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/prev_icon.png*/) center center no-repeat;}
+.flex-direction-nav li a.flex-next{right:40px;background:url("../../images/images/next_icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/next_icon.png*/) center center no-repeat;}
+.flex-direction-nav li a:hover{filter:alpha(opacity=60); -moz-opacity:0.6; -khtml-opacity: 0.6; opacity: 0.6;}
+
+
+.CoreBusiness{ width:100%; padding:0px 0px 40px; background:#f5f5f5;}
+.CoreBusinesstitle{width:100%;}
+.CoreBusinesstitle h3{line-height:40px;text-align:center;font-size:34px; font-weight:bold;color:#1a1a1a; padding:25px 0px 15px;}
+.CoreBusinesstitle p{height:1px; overflow:hidden;line-height:0px;}
+.CoreBusinesstitle p span{ margin:0px auto; display:block; height:1px; overflow:hidden; width:86px; background:#e70f20;line-height:1px;}
+.CoreBusinesstitle em{ display:block; text-align:center; font-size:22px; color:#666; line-height:26px; padding-top:10px;height:26px;overflow:hidden;}
+
+.CoreBusinesslist{height:502px;padding-top:20px;}
+.CoreBusinesslist ul{ margin:0px; padding:0px;height:502px;overflow:hidden; position:relative;}
+.CoreBusinesslist ul li{position:absolute;width:392px;height:250px; overflow:hidden;}
+.CoreBusinesslist ul li.Coredianzi{top:0px; left:0px;}
+.CoreBusinesslist ul li.CoreIntro{height:502px; top:0px; left:394px;}
+.CoreBusinesslist ul li.Coreweixin{top:0px; right:0px;}
+.CoreBusinesslist ul li.Coreweb{bottom:0px; left:0px;}
+.CoreBusinesslist ul li.Coresystem{bottom:0px; right:0px;}
+
+.CoreBusinesslist ul li .CorebgColour{width:100%;height:100%;z-index: -1;padding: 1px; margin: -1px;background:#e60012;position:absolute;left:0;top:0;transition: all 0.1s linear;-moz-transition: all 0.1s linear;-webkit-transition: all 0.1s linear;-o-transition: all 0.1s linear;-ms-transition: all 0.1s linear;}
+
+.CoreBusinesslist ul li .Coreimg{ position:absolute; left:0px; top:0px; width:100%; height:100%;}
+.CoreBusinesslist ul li:hover .CorebgColour{ z-index:99;}
+
+.CoreBusinesslist ul li .Coretextbox{position:absolute;color:#fff; left:0px; top:0px; width:100%; height:100%; z-index:9999;}
+.CoreBusinesslist ul li .Coretextbox h3{ font-size:24px; padding:145px 20px 0px 20px; line-height:36px;}
+.CoreBusinesslist ul li .Coretextbox span{ display:block;font-weight:bold;}
+
+.CoreBusinesslist ul li .Coreclassbox{position:absolute;color:#fff; left:0px; top:0px; width:100%; height:100%; z-index:9999;}
+.CoreBusinesslist ul li .Coreclassbox h3{ font-size:24px; color:#fff; padding:20px 10px 22px;}
+.CoreBusinesslist ul li .Coreclassbox p{ font-size:14px;padding:0px 10px;height:150px;overflow:hidden;text-indent:2em;}
+.CoreBusinesslist ul li .Coreclassbox a{ color:#fff;padding:0px 7px; display:inline-block;}
+
+/*---公司简介---*/
+.syabout{ width:100%; height:400px; background:url("../../images/images/index_07.jpg"/*tpa=http://wubaiyi.net/wby/16111/images/index_07.jpg*/) no-repeat center top #efeeec;}
+.syabouttitle{width:100%;display:block;}
+.syabouttitle h3 a{display:block; height:79px;line-height:79px; font-size:36px; color:#fafafa;text-align:center;padding-top:26px;}
+.syabouttitle p{background:#808080; height:1px; overflow:hidden;line-height:0px;}
+.syaboutus{font-size:16px;color:#f6f6f6;line-height:32px;padding-top:35px;height:190px;overflow:hidden;text-indent: 2em;}
+
+/*---产品展示---*/
+.Case{padding-bottom:20px; width:100%; position:relative;min-width:1180px;}
+
+.Casetitle{width:100%;}
+.Casetitle h3{line-height:36px;text-align:center;font-size:32px;color:#1a1a1a; padding:60px 0px 15px;}
+.Casetitle h3 a{ color:#1a1a1a;}
+.Casetitle h3 a:hover{ color:#e60012;}
+.Casetitle p{background:#d7d4d4; height:1px; overflow:hidden;line-height:0px;}
+.Casetitle p span{ margin:0px auto; display:block; height:1px; overflow:hidden; width:86px; background:#e60012;line-height:1px;}
+.Casetitle em{ display:block; text-align:center; font-size:14px; color:#999999; padding-top:10px;}
+
+
+.Caselist{width:100%; padding:50px 0px 0px; position:relative; overflow:hidden;}
+.Caselist ul{ margin:0px; padding:0px; width:105.5%}
+.Caselist ul li{float:left; width:19%; position:relative;}
+.Caselist ul li img{ display:block; width:100%;}
+.Caselist ul li a{ display:none; position:absolute; color:#fff; left:0px; top:0px; width:100%; height:100%; background:#e60012;_height:270px;}
+.Caselist ul li a h3{ position:relative; padding:20px;font-size:14px;}
+.Caselist ul li a h3 span{ position:absolute; height:2px; width:30px; background:#fff; display:block; bottom:10px;}
+.Caselist ul li a h4{ padding:15% 10px 0px; text-align:center; font-size:18px; font-weight:bold;line-height: 24px;height: 24px;overflow: hidden;}
+.Caselist ul li a em{ display:block; position:absolute; width:37px; height:37px; background:url("../../images/images/icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/icon.png*/) no-repeat 0px -33px; bottom:20px; right:15px;}
+
+.indexmore{ text-align:center; padding:40px 0px 20px;}
+.indexmore a{ display:inline-block; text-align:left; border:2px solid #e60012; color:#e60012; padding:10px 0px 10px 20px; font-size:16px; width:160px; background:url("../../images/images/icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/icon.png*/) no-repeat 85px -87px; }
+
+/*---案例中心---*/
+.fanganpingjia{ background:#f5f5f5; width:100%; padding-bottom:25px; position:relative;}
+.fanganbox{ width:100%; display:none;padding-top:40px;}
+.fanganpingjiatitle{width:100%;}
+.fanganpingjiatitle h3{line-height:36px;text-align:center;font-size:32px;color:#007bc4; padding:50px 0px 15px;}
+.fanganpingjiatitle h3 a{ color:#1a1a1a;}
+.fanganpingjiatitle h3 a:hover{ color:#1a1a1a;}
+.fanganpingjiatitle p{background:#d7d4d4; height:1px; overflow:hidden;line-height:0px;}
+.fanganpingjiatitle p span{ margin:0px auto; display:block; height:1px; overflow:hidden; width:86px; background:#e60012;line-height:1px;}
+.fanganpingjiatitle em{ display:block; text-align:center; font-size:14px; color:#999999; padding-top:10px;}
+
+.fanganpingjialist{ width:1180px; margin:0px auto; position:relative; overflow:hidden;}
+.fanganpingjialist ul{width:9999px; position:relative}
+.fanganpingjialist ul li{float:left;width:1180px; padding-right:20px;}
+
+.fanganpingjialist a.fanganpingjiaPrev,.fanganpingjialist a.fanganpingjianext{display:block; position:absolute;width:50px; height:50px; top:36%; text-align:center; line-height:36px;}
+
+.fanganpingjialist a.fanganpingjiaPrev{background-color:#424242;background-image:url("../../images/images/icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/icon.png*/); background-repeat:no-repeat; background-position:16px -135px; left:0px;}
+.fanganpingjialist a.fanganpingjiaPrev:hover{background-color:#ea0014;}
+
+.fanganpingjialist a.fanganpingjianext{background-color:#424242;background-image:url("../../images/images/icon.png"/*tpa=http://wubaiyi.net/wby/16111/images/icon.png*/); background-repeat:no-repeat; background-position:-28px -135px; right:0px;}
+.fanganpingjialist a.fanganpingjianext:hover{background-color:#ea0014;}
+
+.fanganlist{width:1180px;position:relative; overflow:hidden;}
+.fanganlist dl{ margin:0px; padding:0px; width:1182px;}
+.fanganlist dl dd{ float:left; width:282px; margin-right:18px; background:#FFF; padding-bottom:20px;}
+.fanganlist dl dd img{ display:block; width:282px; height:205px; position:absolute; left:50%; margin-left:-141px; top:50%; margin-top:-102.5px;}
+.fanganlist dl dd span{ display:block; width:282px; position:relative; overflow:hidden; height:205px;}
+.fanganlist dl dd h3{ font-size:16px; color:#4c4c4c; padding:10px 15px 0px; height:21px; overflow:hidden;text-align:center;}
+.fanganlist dl dd p{ font-size:13px; color:#999999; padding:10px 15px 0px; height:63px; overflow:hidden; line-height:21px;}
+.fanganlist dl dd.cur{ margin:0px;}
+
+/*---新闻中心---*/
+.news{width:100%; padding-bottom:50px;}
+.newstitle{width:100%;}
+.newstitle h3{line-height:36px;text-align:center;font-size:32px;color:#007bc4; padding:60px 0px 15px;}
+.newstitle h3 a{ color:#007bc4;}
+.newstitle h3 a:hover{ color:#007bc4;}
+.newstitle p{background:#d7d4d4; height:1px; overflow:hidden;line-height:0px;}
+.newstitle p span{ margin:0px auto; display:block; height:1px; overflow:hidden; width:86px; background:#19a6db;line-height:1px;}
+.newslistbox{overflow:hidden;padding-top:40px;}
+.newslistbox ul li{ float:left;width:560px;overflow:hidden;padding:0 0 30px 25px;}
+.newslistbox ul li .synews_dat{float:left; background:url("../../images/images/Icon-1.png"/*tpa=http://wubaiyi.net/wby/16111/images/Icon.png*/) no-repeat -80px 0px; width:94px; height:94px; text-align:center; font-size:14px; color:#FFF;}
+.newslistbox ul li .synews_dat span{ display:block; padding-top:8px; line-height:50px; font-size:48px;}
+.newslistbox ul li .synews_n{float:left; width:440px;padding-left:10px;}
+.newslistbox ul li .synews_n h3{font-size:16px; overflow:hidden; height:24px; padding-top:10px;}
+.newslistbox ul li .synews_n h3 a{ color:#000}
+.newslistbox ul li .synews_n h3 a:hover{ color:#e60012}
+.newslistbox ul li .synews_n p{ color:#666; font-size:14px;padding-top:5px;height: 48px;line-height: 24px;overflow: hidden;}
+
+/*---底部---*/
+.footbg{ width:100%; background:url("../../images/images/index_51.jpg") repeat-x;overflow:hidden;color:#9b9b9b;}
+.foot{padding-top:50px;}
+.foot h3{ border-bottom:1px solid #a41a25; padding-bottom:10px; color:#FFF;color:#ffffff; font-size:15px;}
+.foot dl{ margin:0px; padding:0px; height:250px;}
+.foot dl dd{ float:left; width:507px;}
+.foot dl dd p{ margin:0px; padding:25px 0px 0px;}
+.foot dl dd span{height:31px; line-height:31px; font-size:14px; color:#b5b5b5;margin-top:22px;display:inline-block;padding-left:40px;}
+.foot dl dd span.ftel,.foot dl dd span.fcz,.foot dl dd span.fyx,.foot dl dd span.fqq{ width:210px;}
+.foot dl dd em{ font-family:Arial, Helvetica, sans-serif;}
+
+.foot dl dt{ float:right; width:618px; line-height:22px;}
+.foot dl dt ul {padding:30px 0 0 0}
+.foot dl dt ul li {width:117px;float:left;padding-right:50px;_padding-right:20px;}
+.foot dl dt ul li span{color:#fafafa; font-size:20px;}
+.foot dl dt ul li ul {padding-top:15px;}
+.foot dl dt ul li ul li{height:34px;}
+.foot dl dt ul li a{color:#b5b5b5;font-size: 14px;}
+/*友情链接*/
+.sylink{background:#737373;}
+.Links{padding:0px;height:77px; font-size:13px;}
+.Links h3{ color:#FFF; font-size:16px; padding:10px 0;}
+.Links a{ margin-right:16px;color:#b3b3b3;}
+.Links a:hover{ color:#FFF;}
+
+.footer{color:#8e8e8e; padding:15px 0 25px 0; font-size:13px;text-align:center;}
+.footer span{padding:0 20px;}
+
+/*右侧固定*/
+.commonposition{_position:absolute;_top: expression(documentElement.scrollTop + 200 + "px");position:fixed; top:20%; right:0px; z-index:999999; display:none;}
+.commonposition a{display:block; width:45px; height:45px; position:relative; background-color:#e20000; background-image:url("../../images/images/icon.png");background-repeat:no-repeat; margin-top:1px;}
+.commonposition a span{display:none; position:absolute; right:0px; top:0px; height:45px; padding-left:50px; color:#fff;line-height:45px; font-size:14px;background-color:#262626;}
+
+.commonposition a.Homedianhua{ background-position:-362px -231px;}
+.commonposition a.Homeweixin{ background-position:-362px -322px;}
+.commonposition a.Hometop{ background-position:-362px -370px; background-color:#4e4e4e;}
+
+.commonposition a span.weixinerweima{right:45px; padding:0px;}
+.commonposition a span.dianhuabggray{background-position:-362px -231px;background-image:url("../../images/images/icon.png");background-repeat:no-repeat;width:120px;}
+
+/*内页*/
+.webbg{ width:100%; background:#f4f4f4;}
+.abanner{margin:0px auto; height:300px; overflow:hidden;}
+.abanner img{width:100%;}
+.anliclass{text-align:center; padding:50px 0px 0;}
+.anliclass a{ display:inline-block; background:url("../../images/images/Icon20.png"/*tpa=http://wubaiyi.net/wby/16111/images/Icon20.png*/) no-repeat; margin:20px; width:130px; height:31px; line-height:31px; color:#7e7e7e;font-size:16px;}
+.anliclass a:hover{background:url("../../images/images/Icon21.png"/*tpa=http://wubaiyi.net/wby/16111/images/Icon21.png*/) no-repeat; color:#FFF;}
+.anliclass a.cur{background:url("../../images/images/Icon21.png"/*tpa=http://wubaiyi.net/wby/16111/images/Icon21.png*/) no-repeat; color:#FFF;}
+
+/*product_list*/
+.anlilist ul li{float:left; width:373px;padding:7px 0px;background:#FFF;box-shadow:0px 2px 3px #d9dbdb;margin:28px 20px 0 0;text-align:center;_margin-top:15px;}
+.anlilist ul li.cur{margin-right:0px;}
+.anlilist ul li h3{ font-size:18px; height:30px; overflow:hidden;line-height:30px;}
+
+/*---news_list---*/
+.newslist{ width:1180px; margin:0px auto; background:url("../../images/images/index_88.png"/*tpa=http://wubaiyi.net/wby/16111/images/index_88.png*/) repeat-y 65px 0px; margin-top:30px;}
+.newslist dl{position:relative; height:175px; padding-bottom:30px;}
+.newslist dl dd{ float:right; width:908px; height:140px; padding:35px 35px 0px 35px; background:#FFF; box-shadow:0px 2px 3px #d9dbdb;}
+.newslist dl dd h3{ font-size:18px;height:24px; line-height:24px; overflow:hidden;}
+.newslist dl dd h3 a{color:#808080;}
+.newslist dl dd p{font-size:14px;color:#adacac;padding-top:10px;height:72px; overflow:hidden;}
+.newslist dl dd p a{ color:#adacac;}
+.newslist dl dd span{font-size:18px;text-align:center;position:absolute; top:0px; left:0px; width:130px; height:120px; border-radius:5px; background:#999;box-shadow:0px 2px 3px #666; color:#fff;}
+.newslist dl dd span em{ display:block;font-weight:bold;font-size:60px; line-height:65px; padding:10px 0px 5px; margin-bottom:8px; border-bottom:1px solid #bfbfbf;}
+
+/*aboutus*/
+.about_us{width:1100px;margin:0 auto;text-align:center;}
+.about_us .about_tit{font-size:34px;padding-top:80px;}
+.about_us .about_dat{font-size:14px;padding-top:18px;}
+.about_us .about_img img{padding:30px 0 0;}
+.about_us .about_cen{line-height:32px;font-size:16px;padding:20px 0;}
+.about_us .fanye {padding:20px 20px 50px;border-top: 1px solid #999;}
+.about_us .fanye span{display:inline-block;font-size:16px;line-height:30px;height:30px;overflow:hidden;}
+.about_us .fanye .fys,.about_us .fanye .fyx{width:400px;}
+.about_us .fanye .fhsy{background:#e60012;color:#fff;width:130px;margin:0 30px;}
+.about_us .fanye .fhsy a{color:#fff;}
+
+/*推荐*/
+.tuijian{width:100%; padding-bottom:60px;}
+.tuijianleft{ float:left; width:211px; height:230px; background:#e60012; padding-right:25px;text-align:right; color:#FFF;}
+.tuijianleft h3{ font-size:24px; line-height:25px; padding-top:48px;}
+.tuijianleft img{padding-top:20px;}
+
+.tuijianright{ float:right; width:936px;overflow:hidden;}
+.tuijianright ul li{ float:left; background:#FFF; width:288px; height:220px; padding:5px 6px; position:relative; margin-right:12px;_margin-right:5px;}
+.tuijianright ul li p{ position:absolute; bottom:5px; width:266px; left:6px; background:url("../../images/images/index_63.png"/*tpa=http://wubaiyi.net/wby/16111/images/index_63.png*/) repeat; font-size:14px; color:#FFF; height:21px; line-height:25px; overflow:hidden; padding:10px 10px;text-align:center;}
+
+/*page*/
+.Page{ text-align:center; padding:50px 0px;}
+.Page a{display:inline-block;width:65px;background:#ffffff;height:48px; vertical-align:middle; line-height:48px; font-size:14px; border:1px solid #e5e5e5;text-decoration:none; color:#333; outline:none;}
+.Page a:hover{ background:#e60012; color:#FFF;background-repeat:no-repeat; }
+.Page span{display:inline-block;min-width:45px; padding:0 10px;background:#e60012;color:#FFF;height:48px; vertical-align:middle; line-height:48px; font-size:14px; border:1px solid #e5e5e5; margin-left:-1px;}
+
+/*动画*/
+.from-top{
+	-webkit-transform-origin: 0% 0%;
+	 -moz-transform-origin: 0% 0%;
+	  -ms-transform-origin: 0% 0%;
+	   transform-origin: 0% 0%;
+}
+
+.from-left{
+	-webkit-transform-origin: 0% 100%;
+	 -moz-transform-origin: 0% 100%;
+	  -ms-transform-origin: 0% 100%;
+	   transform-origin: 0% 100%;
+}
+
+.from-right{
+	-webkit-transform-origin: 100% 100%;
+	 -moz-transform-origin: 100% 100%;
+	  -ms-transform-origin: 100% 100%;
+	   transform-origin: 100% 100%;
+}
+
+.from-bottom{
+	-webkit-transform-origin: 0% 100%;
+	 -moz-transform-origin: 0% 100%;
+	  -ms-transform-origin: 0% 100%;
+	   transform-origin: 0% 100%;
+}
+
+
+.from-top, .from-left{
+	-webkit-animation: enter-clockwise 0.23s ease-out;
+	 -moz-animation: enter-clockwise 0.23s ease-out;
+	  -ms-animation: enter-clockwise 0.23s ease-out;
+	   animation: enter-clockwise 0.23s ease-out;
+}
+
+
+.from-right, .from-bottom{
+	-webkit-animation: enter-anti-clockwise 0.23s ease-out;
+	 -moz-animation: enter-anti-clockwise 0.23s ease-out;
+	  -ms-animation: enter-anti-clockwise 0.23s ease-out;
+	   animation: enter-anti-clockwise 0.23s ease-out;
+}
+.to-top{
+	-webkit-transform-origin: 0% 0%;
+	 -moz-transform-origin: 0% 0%;
+	  -ms-transform-origin: 0% 0%;
+	   transform-origin: 0% 0%;
+}
+
+.to-left{
+	-webkit-transform-origin: 0% 100%;
+	 -moz-transform-origin: 0% 100%;
+	  -ms-transform-origin: 0% 100%;
+	   transform-origin: 0% 100%;
+}
+
+.to-right{
+	-webkit-transform-origin: 100% 100%;
+	 -moz-transform-origin: 100% 100%;
+	  -ms-transform-origin: 100% 100%;
+	   transform-origin: 100% 100%;
+}
+
+.to-bottom{
+	-webkit-transform-origin: 0% 100%;
+	 -moz-transform-origin: 0% 100%;
+	  -ms-transform-origin: 0% 100%;
+	   transform-origin: 0% 100%;
+}
+
+.to-top, .to-left{
+	-webkit-animation: leave-anti-clockwise 0.23s ease-out;
+	 -moz-animation: leave-anti-clockwise 0.23s ease-out;
+	  -ms-animation: leave-anti-clockwise 0.23s ease-out;
+	   animation: leave-anti-clockwise 0.23s ease-out;
+}
+
+
+
+.to-right, .to-bottom{
+	-webkit-animation: leave-clockwise 0.23s ease-out;
+	 -moz-animation: leave-clockwise 0.23s ease-out;
+	  -ms-animation: leave-clockwise 0.23s ease-out;
+	   animation: leave-clockwise 0.23s ease-out;
+}
+
+@-webkit-keyframes enter-clockwise{
+	from{
+		z-index: 3;
+		-webkit-transform: rotate(-90deg);
+	}
+	to{
+		z-index: 3;
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-moz-keyframes enter-clockwise{
+	from{
+		z-index: 3;
+		-moz-transform: rotate(-90deg);
+	}
+	to{
+		z-index: 3;
+		-moz-transform: rotate(0deg);
+	}
+}
+@-ms-keyframes enter-clockwise{
+	from{
+		z-index: 3;
+		-ms-transform: rotate(-90deg);
+	}
+	to{
+		z-index: 3;
+		-ms-transform: rotate(0deg);
+	}
+}
+@keyframes enter-clockwise{
+	from{
+		z-index: 3;
+		transform: rotate(-90deg);
+	}
+	to{
+		z-index: 3;
+		transform: rotate(0deg);
+	}
+}
+
+@-webkit-keyframes enter-anti-clockwise{
+	from{
+		z-index: 3;
+		-webkit-transform: rotate(90deg);
+	}
+	to{
+		z-index: 3;
+		-webkit-transform: rotate(0deg);
+	}
+}
+@-moz-keyframes enter-anti-clockwise{
+	from{
+		z-index: 3;
+		-moz-transform: rotate(90deg);
+	}
+	to{
+		z-index: 3;
+		-moz-transform: rotate(0deg);
+	}
+}
+@-ms-keyframes enter-anti-clockwise{
+	from{
+		z-index: 3;
+		-ms-transform: rotate(90deg);
+	}
+	to{
+		z-index: 3;
+		-ms-transform: rotate(0deg);
+	}
+}
+@keyframes enter-anti-clockwise{
+	from{
+		z-index: 3;
+		transform: rotate(90deg);
+	}
+	to{
+		z-index: 3;
+		transform: rotate(0deg);
+	}
+}
+
+@-webkit-keyframes leave-clockwise{
+	from{
+		z-index: 3;
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-webkit-transform: rotate(90deg);
+	}
+}
+@-moz-keyframes leave-clockwise{
+	from{
+		z-index: 3;
+		-moz-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-moz-transform: rotate(90deg);
+	}
+}
+@-ms-keyframes leave-clockwise{
+	from{
+		z-index: 3;
+		-ms-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-ms-transform: rotate(90deg);
+	}
+}
+@keyframes leave-clockwise{
+	from{
+		z-index: 3;
+		transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		transform: rotate(90deg);
+	}
+}
+
+@-webkit-keyframes leave-anti-clockwise{
+	from{
+		z-index: 3;
+		-webkit-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-webkit-transform: rotate(-90deg);
+	}
+}
+@-moz-keyframes leave-anti-clockwise{
+	from{
+		z-index: 3;
+		-moz-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-moz-transform: rotate(-90deg);
+	}
+}
+@-ms-keyframes leave-anti-clockwise{
+	from{
+		z-index: 3;
+		-ms-transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		-ms-transform: rotate(-90deg);
+	}
+}
+@keyframes leave-anti-clockwise{
+	from{
+		z-index: 3;
+		transform: rotate(0deg);
+	}
+	to{
+		z-index: 3;
+		transform: rotate(-90deg);
+	}
+}

@@ -1,0 +1,48 @@
+{template "content","head"}
+{template "content","position"}
+<div class="main w1200 fix">
+    {template "content","nav"}
+    <div class="programmexq mian_right rt">
+        <h3>{$CATEGORYS[$catid][catname]}</h3>
+        <div class="programmexq_top fix">
+            <div class="game fl">
+                <ul class="bigImg">
+                    {loop $gallery $v}
+                    <li >
+                        <img src="{$v[url]}" />
+                    </li>
+                    {/loop}
+                </ul>
+                <div class="smallScroll">
+                    <div class="smallImg">
+                        <ul>
+                            {loop $gallery $v}
+                            <li><a><img src="{$v[url]}" /></a></li>
+                            {/loop}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jQuery(".game").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,    delayTime       :200,
+                    startFun:function(i,p){
+                        //控制小图自动翻页
+                        if(i==0){ jQuery(".game .sPrev").click() } else if( i%4==0 ){ jQuery(".game .sNext").click(   )}
+                    }
+                });
+                jQuery(".game .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,scroll:4,effect:"left",autoPage:  true,     prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+            </script>
+            <div class="programmexq_topLeft rt">
+                <p>{$introuce}</p>                <!-- 跳留言板 -->
+                <a href="{$CATEGORYS[60][url]}">在线咨询</a>
+            </div>
+        </div>
+        <div class="programmexq_bottom">
+            <b>系统概述</b>
+            <p>{$content}</p>
+            <b>功能介绍</b>
+            <p>{$parm}</p>      
+        </div>
+    </div>
+</div>
+{template "content","foot"}

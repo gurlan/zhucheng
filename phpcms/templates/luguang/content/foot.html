@@ -1,0 +1,75 @@
+{pc:content action="lists" catid="26" num="1" moreinfo=1 order="listorder ASC,inputtime desc" page="$page"}
+<div class="footer fix">
+    <div class="w1200">
+        <div class="footer_top fix">
+            <div class="footer_left">
+                <img src="{$data[1][thumb]}">
+            </div>
+            <div class="footer_main">
+                <span>友情链接：</span>
+
+                <ul>
+                    {pc:link action="type_list" siteid="$siteid" order="listorder DESC" num="10" return="dat"}
+                    {loop $dat $v}
+                    <li><a href="{$v[url]}" style="display: block;color: #fff;">{$v[name]}</a> </li>
+                    {/loop}
+                    {/pc}
+
+                </ul>
+            </div>
+            <div class="footer_right">
+                <em>
+                    <img src="{$data[1][qrcode1]}">
+                    <p>微信公众号</p>
+                </em>
+                <em>
+                    <img src="{$data[1][qrcode2]}">
+                    <p>微信服务号</p>
+                </em>
+            </div>
+        </div>
+        <div class="footer_bom">
+            <p style="color:#fff">版权所有：{$data[1][copyright]}    备案号：{$data[1][beian]}   网址：{$data[1][web]}</p>
+        </div>
+    </div>
+</div>
+<div class="function">
+
+    <i class="t"><a href="#anchor" class="topLink"><img src="{IMG_PATH}top.png"></a></i>
+    <div class="function_cn fix le">
+        <div class="hd fix">
+            <ul>
+                <li><img src="{IMG_PATH}weix.png"></li>
+                <li><img src="{IMG_PATH}qq.png"></li>
+                <li class="on"><img src="{IMG_PATH}rex1.png"></li>
+            </ul>
+        </div>
+        <div class="bd fix">
+            <ul>
+                <li>
+                    <em><img src="{$data[1][left_qrcode]}"></em>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                        <span>
+                            <p>办公室：{$data[1][qq1]}</p>
+                            <p>售后：{$data[1][qq2]}</p>
+                            <p>销售：{$data[1][qq3]}</p>
+                        </span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <i>Tel：{$data[1][right_tel]}</i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <strong><a href="{$data[1][yuyue]}" target="_blank"><img src="{IMG_PATH}liuyan.png"><p>预约咨询</p></a></strong>
+    <script>
+        jQuery(".function_cn").slide({});
+    </script>
+</div>
+</body>
+</html>

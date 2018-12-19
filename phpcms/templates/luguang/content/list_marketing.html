@@ -1,0 +1,28 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="marketing mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <i><img src="{IMG_PATH}marketing.jpg"></i>
+            <ul class="fix">
+                {pc:content action="lists" moreinfo="1" catid="$catid" num="100" order="listorder ASC,inputtime desc" page="$page"}
+                {php $i=1}
+                {loop $data $r}
+                <li {if $i%3==1}class="one"{/if}>
+                    <em>
+                        <img src="{$r[thumb]}">
+                        <span>{$r[title]}</span>
+                        <p>业务经理：{$r[leader]}</p>
+                        <p>电话：{$r[phone]}</p>
+                        <p>手机：{$r[mobile]}</p>
+                        <p>传 真：{$r[fax]}</p>
+                        <p>邮 箱：{$r[email]}</p>
+                    </em>
+                </li>
+                {php $i++}
+                {/loop}
+            </ul>
+        </div>
+    </div>
+    {template "content","foot"}

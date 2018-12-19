@@ -1,0 +1,27 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="cooperate mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul class="cooperate_ul fix">
+                {pc:content action="lists" catid="$catid" num="9" order="listorder ASC,inputtime desc" page="$page"}
+                {php $i=1}
+                {loop $data $r}
+                <li {if $i%3==1}class="one"{/if}>
+                    <a href="{$r[url]}">
+                        <img src="{$r[thumb]}">
+                        <p>{$r[title]}</p>
+                    </a>
+                </li>
+                {php $i++}
+                {/loop}
+            </ul>
+            <div class="link">
+                <ul class="fix">
+                    {$pages}
+                </ul> 
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

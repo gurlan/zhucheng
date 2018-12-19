@@ -1,0 +1,40 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="speech mian_right rt">
+            <h3>留言板</h3>
+            <p>填写以下表格，留下您的宝贵意见，竭诚为您服务 。（<i>*</i>为必填项）</p>
+            <form action="/index.php?m=formguide&c=index&a=show&formid=12&siteid=1" method="post" name="myform">
+                <em class="fix">
+                    <span><i>*</i>姓名：</span>
+                    <input type="text" name="info[name]">
+                </em>
+                <em class="fix">
+                    <span><i>*</i>电话：</span>
+                    <input type="text" name="info[phone]">
+                </em>
+                <em class="fix">
+                    <span>邮箱：</span>
+                    <input type="text" name="info[email]">
+                </em>
+                <em class="fix">
+                    <span>地址：</span>
+                    <input type="text" name="info[address]">
+                </em>
+                <em class="fix">
+                    <span>内容：</span>
+                    <textarea name="info[content]"></textarea>
+                </em>
+                <em class="fix code">
+                    <span>验证码：</span>
+                    <input type="text" name="info[code]">
+                    {php pc_base::load_sys_class('form', '', 0);}
+                    {form::checkcode('code_img', '4', '18', 120, 40)}
+                    <a href="javascript:" onclick="$('#code_img').click()">看不清？换一张</a>
+                </em>
+                <input type="submit" name="dosubmit" class="submit">
+            </form>
+        </div>
+    </div>
+{template "content","foot"}

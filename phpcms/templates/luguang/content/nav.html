@@ -1,0 +1,15 @@
+<div class="main_nav le">
+    <em>
+        <h3>{$CATEGORYS[$cat][catname]}</h3>
+        <span></span>
+    </em>
+    <ul>
+        {pc:content action="category" catid="$cat" num="25" siteid="$siteid" order="listorder ASC"}
+        {loop $data $k=>$r}
+        <li {if $k==$catid} class="on"{/if}>
+            <a href="{$r[url]}" class="xiagao">{$r[catname]}</a>
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>

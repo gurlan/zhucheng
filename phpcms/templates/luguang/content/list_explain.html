@@ -1,0 +1,24 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="explain mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul class="fix explain_ul">
+                {pc:content action="lists" catid="$catid" num="9" moreinfo=1 order="listorder ASC,inputtime desc" page="$page"}
+                {loop $data $r}
+                <li class="fix">
+					<span>{$r[title]}</span>
+
+					<a href="{php echo json_decode($r[file],true)[0][fileurl]}">立即下载</a>
+                </li>
+                {/loop}
+            </ul>
+            <div class="link">
+                <ul class="fix">
+                    {$pages}
+                </ul> 
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

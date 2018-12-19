@@ -1,0 +1,162 @@
+{template "content","header"}
+<!--banner 开始-->
+<div class="banner">
+    <ul class="slides">
+        {pc:content action="lists" catid="27" moreinfo="1" order="listorder asc"}
+        {loop $data $r}
+        <li style="background:url({$r[thumb]}) 50% 0 no-repeat;"></li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+<script src="{JS_PATH}js/jquery.flexslider-min.js"></script>
+<script>
+    $(function(){
+      $('.banner').flexslider({
+        directionNav: true,
+        pauseOnAction: false
+    });
+  });
+</script>
+<!--banner 结束-->
+<div class="CoreBusiness">
+    <div class="CoreBusinesstitle bcenters">
+    <h3>{$CATEGORYS[28][catname]}</h3>
+      <p><span></span></p>
+      <em>{$CATEGORYS[28][description]}</em> </div>
+      <div class="CoreBusinesslist bcenter">
+        <ul class="clearfix">
+          <li class="Coredianzi">
+            <div class="Coreclassbox">
+              <h3><a href="">{$CATEGORYS[29][catname]}</a></h3>
+              <p> {$CATEGORYS[29][description]}</p>
+          </div>
+          <div class="Coreimg"><img src="{$CATEGORYS[29][image]}" width="392" height="250"  alt="" /></div>
+          <div class="CorebgColour to-bottom"></div>
+      </li>
+      <li class="Coreweixin">
+        <div class="Coreclassbox">
+          <h3><a href="">{$CATEGORYS[30][catname]}</a></h3>
+          <p>  {$CATEGORYS[30][description]}</p>
+      </div>
+      <div class="Coreimg"><img src="{$CATEGORYS[30][image]}" width="392" height="250"  alt="" /></div>
+      <div class="CorebgColour to-bottom"></div>
+  </li>
+  <li class="Coreweb">
+    <div class="Coreclassbox">
+      <h3><a href="">{$CATEGORYS[31][catname]}</a></h3>
+      <p> {$CATEGORYS[31][description]}</p>
+  </div>
+  <div class="Coreimg"><img src="{$CATEGORYS[31][image]}" width="392" height="250"  alt="" /></div>
+  <div class="CorebgColour to-bottom"></div>
+</li>
+<li class="Coresystem">
+    <div class="Coreclassbox">
+      <h3><a href="">{$CATEGORYS[32][catname]}</a></h3>
+      <p>  {$CATEGORYS[32][description]}</p>
+  </div>
+  <div class="Coreimg"><img src="{$CATEGORYS[32][image]}" width="392" height="250"  alt="" /></div>
+  <div class="CorebgColour to-bottom"></div>
+</li>
+<li class="CoreIntro">
+    <div class="Coretextbox">
+      <h3>{$CATEGORYS[33][catname]}{$CATEGORYS[33][description]}</h3>
+  </div>
+  <div class="Coreimg"><img src="{$CATEGORYS[33][image]}" width="392" height="502"  alt="" /></div>
+  <div class="CorebgColour to-bottom"></div>
+</li>
+</ul>
+</div>
+</div>
+<!--产品展示-->
+<div class="Case">
+  <div class="Casetitle">
+    <h3><a href="">产品展示</a></h3>
+    <p><span></span></p>
+</div>
+<div class="Caselist">
+    <ul class="clearfix">
+        {pc:content action="lists" catid="10" num="10" moreinfo="1" order="listorder asc"}
+        {loop $data $r}
+        <li>
+            <img src="{$r[thumb]}" width="270" height="270" alt=""> 
+            <a href="{$r[url]}">
+                <h3>产品展示<span></span></h3>
+                <h4>{$r[title]}</h4>
+                <em></em> 
+            </a> 
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+<div class="indexmore"><a href="{$CATEGORYS[10][url]}">查看更多</a></div>
+</div>
+<!--关于我们-->
+{pc:content action="lists" catid="9" num="1" moreinfo="1" order="listorder asc"}
+{loop $data $r}
+<div class="syabout">
+  <div class="syabouttitle">
+      <h3><a href="{$CATEGORYS[9][url]}">{$r[title]}</a></h3>
+      <p></p>
+  </div>
+  <div class="syaboutus bcenter"> {str_cut(strip_tags($r[content]),1500)}</div>
+</div>
+{/loop}
+{/pc}
+<!--案例展示-->
+<div class="fanganpingjia">
+    <div class="fanganpingjiatitle">
+      <h3><a href="{$CATEGORYS[22][url]}">案例展示</a></h3>
+      <p><span></span></p>
+  </div>
+  <div class="fanganbox jiejuebox">
+      <div class="fanganpingjialist indexjiejue">
+        <ul>
+            {pc:content action="lists" catid="22" moreinfo="1" order="listorder asc"}
+            {php $arr=array_chunk($data,4);}
+            {loop $arr $case}
+            <li>
+                <div class="fanganlist">
+                  <dl class="clearfix">
+                    {loop $case $r}
+                    <dd {if $n==4}class="cur"{/if}>
+                        <a href="{$r[url]}">
+                            <span><img src="{$r[thumb]}" width="282" height="205" /></span>
+                            <h3>{$r[title]}</h3>
+                        </a>
+                    </dd>
+                    {/loop}
+                </dl>
+            </div>
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+    <a href="javascript:;" class="fanganpingjiaPrev jiejueleft">&nbsp;</a><a href="javascript:;" class="fanganpingjianext jiejuerighr">&nbsp;</a> </div>
+    <div class="indexmore"><a href="{$CATEGORYS[22][url]}">查看更多</a></div>
+</div>
+</div>
+<!--新闻中心-->
+<div class="news">
+  <div class="fanganpingjiatitle">
+    <h3><a href="{$CATEGORYS[17][url]}">新闻中心</a></h3>
+    <p><span></span></p>
+</div>
+<div class="newslistbox bcenter">
+    <ul>
+        {pc:content action="lists" catid="17" num="8" moreinfo="1" order="listorder asc"}
+        {loop $data $r}
+        <li>
+            <div class="synews_dat">
+                <span>{date("d",$r[inputtime])}</span>{date("Y-m",$r[inputtime])}
+            </div>
+            <div class="synews_n"><h3><a href="{$r[url]}">{$r[title]}</a></h3><p>{$r[description]}</p></div>
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+</div>
+<!--友情链接-->
+{template "content","footer"}

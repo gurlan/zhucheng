@@ -1,0 +1,129 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="{$SEO['keyword']}">
+    <meta name="description" content="{$SEO['description']}">
+    <script type="text/javascript" src="{JS_PATH}jquery1.42.min.js"></script>
+    <script type="text/javascript" src="{JS_PATH}zoom.js"></script>
+    <script type="text/javascript" src="{JS_PATH}jquery.SuperSlide.2.1.1.js"></script>
+    <link rel="stylesheet" href="{CSS_PATH}style.css">
+
+
+  <title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+</head>
+{php $tmp=explode(',',$CATEGORYS[$catid][arrparentid]);$num=count($tmp);}
+{if $num==1}
+{php $cat=$catid;}
+{else}
+{php $cat=$tmp[1];}
+{/if}
+<body>
+    <div class="common"  id="anchor">
+        <div class="head" class="fix">
+            <div class="w1200">
+                <p>欢迎来到石家庄鹿光衡器有限公司 !</p>
+                <span>0311-82100713、0311-82011949</span>
+            </div>
+        </div>
+        <div class="logo fix w1200">
+            <div class="left fix">
+                {pc:content action="lists" catid="26" num="1" moreinfo=1 order="listorder ASC,inputtime desc" page="$page"}
+
+                <i>  <img src="{$data[1][top_logo]}"></i>
+            </div>
+            <div class="right">
+                <form class="fix" method="get" id="form" action="{APP_PATH}/index.php?m=search&c=index&a=init&typeid=0&siteid=1&q=">
+                    <input type="text" name="q" class="text" placeholder="请输入搜索内容">
+                    <input type="button" id="search" value="搜索" class="submit">
+                    <img src="{IMG_PATH}index3.png">
+                </form>
+                <script>
+                    $('#search').click(function () {
+                        var q = $('[name=q]').val();
+                        if(!q){
+                            alert('请输入关键词');
+                            return
+                        }
+                        var url = $('#form').attr('action');
+                        url = url+q;
+                        window.location.href=url;
+                    })
+                </script>
+            </div>
+        </div>
+        <div class="w1200">
+            <div class="nav fix">
+                <div class="w1200">
+                    <ul class="navul fix">
+                        <li class="nLi {if $catid==0} on {/if}">
+                            <h3><a href="/">网站首页</a></h3>
+                        </li>
+                        {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+                        {loop $data $r}
+                        <li class="nLi {if $cat==$r[catid]} on {/if} ">
+                            <h3><a href="{$r[url]}">{$r[catname]}</a></h3>
+                             <div class="sub">
+                                <div class="w1200 fix">
+                                    {pc:content action="category" catid="$r['catid']" num="25" siteid="$siteid" order="listorder ASC"}
+                                    {loop $data $v}
+                                    <div class="classify">
+                                        <img src="{$v[image]}">
+                                        <h3><a href="{$v[url]}">{$v[catname]}</a></h3>
+                                        {pc:content action="category" catid="$v['catid']" num="25" siteid="$siteid" order="listorder ASC"}
+
+                                        <?php if($data){  ?>
+                                        <ul>
+                                            {loop $data $l}
+                                            <li><a href="{$l[url]}">{$l[catname]}</a></li>
+                                            {/loop}
+                                        </ul>
+                                       <?php } ?>
+                                        {/pc}
+                                    </div>
+                                    {/loop}
+                                    {/pc}
+                                </div>
+                            </div>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                    <script id="jsID" type="text/javascript">
+                        jQuery(".navul").slide({
+                        type:"menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+                        titCell:".nLi", //鼠标触发对象
+                        targetCell:".sub", //titCell里面包含的要显示/消失的对象
+                        effect:"slideDown", //targetCell下拉效果
+                        delayTime:300 , //效果时间
+                        triggerTime:0, //鼠标延迟触发时间（默认150）
+                        returnDefault:true //   鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="banner w1200" style="height: 600px">
+            <div class="banner-img fix">
+                {php $banner = getads(11)}
+
+                <div class="hd">
+                    <ul>
+                        {loop $banner[d] $r}
+                        <li></li>
+                        {/loop}
+                    </ul>
+                </div>
+                <div class="bd">
+                    <ul>
+                        {loop $banner[d] $r}
+                        <li><a href="{$r[linkurl]}"><img src="{$r[imageurl]}" /></a></li>
+                        {/loop}
+                    </ul>
+                </div>
+            </div>
+            <script type="text/javascript">
+                jQuery(".banner-img").slide({mainCell:".bd ul",autoPlay:true});
+            </script>
+        </div>
+    </div>

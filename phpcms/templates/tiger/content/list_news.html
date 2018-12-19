@@ -1,0 +1,22 @@
+{template "content","header"}
+<body>
+<div class="news fix">
+    <div class="news_cn fix">
+        <ul>
+            {pc:content action="lists" catid="$catid" num="100" order="listorder DESC,inputtime desc" page="$page"}
+            {loop $data $r}
+            <li>
+                <a href="{$r[url]}" class="tbox">
+                    <div><i><img src="{$r[thumb]}"/></i></div>
+                    <div class="news_sm">
+                        <h3>{$r[title]}</h3>
+                        <span>{date("Y-m-d",$r[inputtime])}</span>
+                    </div>
+                </a>
+            </li>
+            {/loop}
+        </ul>
+    </div>
+</div>
+
+{template "content","footer"}

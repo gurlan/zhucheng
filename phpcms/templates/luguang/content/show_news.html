@@ -1,0 +1,21 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="newsxq mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <h4>{$title}</h4>
+
+            <em><i>来源:{$copyfrom}</i><i>作者：{$author}</i><i>发布时间：{$inputtime}</i><i id="hits"></i></em>
+            <p>{$content}</p>
+            <span>
+                <a href="{$previous_page[url]}">上一篇：{$previous_page[title]}</a>
+                <a href="{$next_page[url]}">下一篇：{$next_page[title]}</a>
+            </span>
+        </div>
+    </div>
+{template "content","foot"}
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+<script>
+    $('#hits').append('次浏览')
+</script>

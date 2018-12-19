@@ -1,0 +1,79 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        <div class="main_nav le">
+            <em>
+                <h3>{$CATEGORYS[$catid][catname]}</h3>
+                <span></span>
+            </em>
+            <ul>
+                {pc:content action="category" catid="22" num="25" siteid="$siteid" order="listorder ASC"}
+                {loop $data $k=>$r}
+                <li {if $CATEGORYS[$catid][parentid]==$k} class="on"{/if}><a class="xiagao {if $CATEGORYS[$catid][parentid]==$k}currentDd currentDt {/if}">{$r[catname]}<i></i></a>
+                <ul class="xiao" {if $CATEGORYS[$catid][parentid]==$k}style="display: block;" {/if}>
+                {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                {loop $data $l=>$v}
+                <li {if $l==$catid} class="on"{/if}><a href="{$v[url]}">{$v[catname]}</a></li>
+                {/loop}
+                {/pc}
+            </ul>
+            </li>
+            {/loop}
+            {/pc}
+            </ul>
+            <script type="text/javascript">
+                $(function(){
+                    $(".xiagao").click(function(){
+                        $(this).toggleClass("currentDd").siblings(".xiagao").removeClass("currentDd")
+                        $(this).toggleClass("currentDt").siblings(".xiagao").removeClass("currentDt")
+                        $(this).next(".xiao").slideToggle(300).siblings(".xiao").slideUp(500)
+                    })
+                })
+            </script>
+        </div>
+        <div class="productxq mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <div class="productxq_top fix">
+                <div class="game163 fl">
+                    <ul class="bigImg">
+                    {loop $gallery $v}
+                        <li >
+                            <img src="{$v[url]}" />
+                        </li>
+                    {/loop}
+                    </ul>
+                    <div class="smallScroll">
+                        <div class="smallImg">
+                             <ul>
+                                 {loop $gallery $v}
+                                <li><a><img src="{$v[url]}" /></a></li>
+                                 {/loop}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    jQuery(".game163").slide({ titCell:".smallImg li", mainCell:".bigImg", effect:"fold", autoPlay:true,    delayTime       :200,
+                        startFun:function(i,p){
+                            //控制小图自动翻页
+                            if(i==0){ jQuery(".game163 .sPrev").click() } else if( i%4==0 ){ jQuery(".game163 .sNext").click(   )}
+                        }
+                    });
+                    jQuery(".game163 .smallScroll").slide({ mainCell:"ul",delayTime:100,vis:4,scroll:4,effect:"left",autoPage:  true,     prevCell:".sPrev",nextCell:".sNext",pnLoop:false });
+                </script>
+                <div class="productxq_topLeft rt">
+                    <b>产品简介</b>
+                    <p>{$introuce}</p>
+                    <!-- 跳留言板 -->
+                    <a href="speech.html">在线咨询</a>
+                </div>
+            </div>
+            <div class="productxq_bottom">
+                <b>功能特点</b>
+                <p>{$content}</p>
+                <b>技术参数</b>
+                <p>{$parm}</p>
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

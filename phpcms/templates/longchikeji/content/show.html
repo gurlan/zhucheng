@@ -1,0 +1,31 @@
+{template "content","header"}
+<div class="webbg">
+
+  <div class="abanner">
+   {if $CATEGORYS[$catid]['parentid']==0} 
+   <img src="{$CATEGORYS[$catid][image]}" /> 
+   {else} 
+   <img src="{$CATEGORYS[$CATEGORYS[$catid]['parentid']][image]}" /> 
+   {/if}
+ </div>
+
+ <div class="about_us">
+   <div class="about_tit">{$title}</div> 
+   <div class="about_dat">作者：{$copyfrom}&nbsp;&nbsp;时间：{$inputtime}</div>
+   <div class="about_cen" style="text-align: left;">
+     {$content}
+   </div>
+
+   <div class="fanye" style="text-align: center;">
+
+     <span class="fys">上一篇：<a href="{$previous_page[url]}">{$previous_page[title]}</a></span>
+     <span class="fhsy"><a href="javascript:history.back(-1)">返回</a></span>
+     <span class="fyx">下一篇：<a href="{$next_page[url]}">{$next_page[title]}</a></span>
+
+   </div> 
+ </div>
+
+ {template "content","tuijian"}
+
+</div>
+{template "content","footer"}

@@ -1,0 +1,43 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="honor mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul class="honor_ul fix">
+                {pc:content action="lists" catid="$catid" num="9" order="listorder ASC,inputtime desc" page="$page"}
+                 {php $i=1}
+                {loop $data $r}
+
+                <li {if $i%3==1}class="one"{/if}>
+                    <div class="honor_div">
+                        <i><img src="{$r[thumb]}" class="smallimg"></i>
+                        <em class="fangda" ><img src="{IMG_PATH}honor.png"></em>
+                    </div>
+                    <p>{$r[title]}</p>
+                </li>
+                {php $i++}
+                {/loop}
+            </ul>
+            <img src="" alt="" class="bigimg">
+<div class="mask">
+</div>
+            <script>
+        $(function(){
+            /*
+             smallimg   // 小图
+             bigimg  //点击放大的图片
+             mask   //黑色遮罩
+             */
+            var obj = new zoom('mask', 'bigimg','smallimg');
+            obj.init();
+        })
+    </script>
+            <div class="link">
+                <ul class="fix">
+                {$pages}
+                </ul>
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

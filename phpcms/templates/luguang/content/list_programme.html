@@ -1,0 +1,29 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="programme mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <div class="programme_top">
+                <span>{$CATEGORYS[$catid][catname]}系统解决方案</span>
+                <p>{$CATEGORYS[$catid][description]}</p>
+            </div>
+            <div class="programme_bottom">
+                <span>解决方案</span>
+                <ul class="fix">
+                    {pc:content action="lists" catid="$catid" num="50" order="listorder ASC,inputtime desc" page="$page"}
+                    {php $i=1}
+                    {loop $data $r}
+                    <li  {if $i%3==1}class="one"{/if} >
+                        <img src="{$r[thumb]}">
+                        <b>{$r[title]}</b>
+                        <p>{$r[description]}</p>
+                        <a href="{$r[url]}">查看详情</a>
+                    </li>
+                    {php $i++}
+                    {/loop}
+                </ul>
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

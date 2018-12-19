@@ -1,0 +1,60 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        <div class="main_nav le">
+            <em>
+                <h3>产品中心</h3>
+                <span></span>
+            </em>
+            <ul>
+                {pc:content action="category" catid="22" num="25" siteid="$siteid" order="listorder ASC"}
+                {loop $data $k=>$r}
+                <li {if $CATEGORYS[$catid][parentid]==$k} class="on"{/if}><a class="xiagao {if $CATEGORYS[$catid][parentid]==$k}currentDd currentDt {/if}">{$r[catname]}<i></i></a>
+                    <ul class="xiao" {if $CATEGORYS[$catid][parentid]==$k}style="display: block;" {/if}>
+                        {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+                        {loop $data $l=>$v}
+                        <li {if $l==$catid} class="on"{/if}><a href="{$v[url]}">{$v[catname]}</a></li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+        <script type="text/javascript">
+            $(function(){
+                $(".xiagao").click(function(){
+                $(this).toggleClass("currentDd").siblings(".xiagao").removeClass("currentDd")
+                $(this).toggleClass("currentDt").siblings(".xiagao").removeClass("currentDt")
+                $(this).next(".xiao").slideToggle(300).siblings(".xiao").slideUp(500)
+            })  
+            })
+        </script>
+        </div>
+        <div class="product mian_right rt">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul class="fix product_ul">
+                {pc:content action="lists" catid="$catid" num="9" order="listorder ASC,inputtime desc" page="$page"}
+                {php $i=1}
+                {loop $data $r}
+                <li {if $i%3==1}class="one"{/if}>
+                    <a href="{$r[url]}">
+                        <i><img src="{$r[thumb]}"></i>
+                        <em>
+                            <img src="{IMG_PATH}index_newest1.png">
+                            <span>查看详情</span>
+                        </em>
+                        <p>{$r[title]}</p>
+                    </a>
+                </li>
+                {php $i++}
+                {/loop}
+            </ul>
+            <div class="link">
+                <ul class="fix">
+                    {$pages}
+                </ul>
+            </div>
+        </div>
+    </div>
+{template "content","foot"}

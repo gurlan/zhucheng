@@ -1,0 +1,24 @@
+<div class="footer fix">
+    <ul>
+        <li {if $catid!=19 and  $catid!=10 } class="on"{/if}>
+            <a href="/">
+                <i class="footer_tb1"></i>
+                <span>首页</span>
+            </a>
+        </li>
+        <li{if $catid==19} class="on"{/if}>
+            <a href="{$CATEGORYS[19][url]}" >
+                <i class="footer_tb2"></i>
+                <span>{$CATEGORYS[19][catname]}</span>
+            </a>
+        </li>
+        <li {if $catid==10} class="on"{/if}>
+            <a href="{$CATEGORYS[10][url]}">
+                <i class="footer_tb3"></i>
+                <span>{$CATEGORYS[10][catname]}</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

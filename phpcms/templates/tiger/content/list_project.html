@@ -1,0 +1,11 @@
+{template "content","header"}
+<body>
+<div class="project fix">
+    <ul>
+        {pc:content action="lists" catid="$catid" num="100" order="listorder DESC,inputtime desc" page="$page"}
+        {loop $data $r}
+        <li><a href="{$r[url]}"><i><img src="{$r[thumb]}"/></i></a></li>
+        {/loop}
+    </ul>
+</div>
+{template "content","footer"}

@@ -1,0 +1,130 @@
+{template "content","header"}
+<body>
+<!--banner-->
+<div class="banner fix" id="banner">
+    <div class="hd">
+        <ul>
+            {php $banner = getads(11)}
+            {loop $banner[d] $r}
+            <li></li>
+            {/loop}
+        </ul>
+    </div>
+    <div class="bd">
+        <ul>
+            {loop $banner[d] $r}
+            <li><a href="{$r[linkurl]}"><img src="{$r[imageurl]}" /></a></li>
+            {/loop}
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell: "#banner",
+        titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell: ".bd ul",
+        effect: "left",
+        autoPlay: true,//自动播放
+        autoPage: true, //自动分页
+        switchLoad: "_src" //切换加载，真实图片路径为"_src"
+    });
+</script>
+<div class="index_nav fix">
+    <ul>
+        <li><a href="{$CATEGORYS[9][url]}"><i><img src="{$CATEGORYS[9][image]}"/></i><span>{$CATEGORYS[9][catname]}</span></a></li>
+        <li><a href="{$CATEGORYS[10][url]}"><i><img src="{$CATEGORYS[10][image]}"/></i><span>{$CATEGORYS[10][catname]}</span></a></li>
+        <li><a href="{$CATEGORYS[20][url]}"><i><img src="{$CATEGORYS[20][image]}"/></i><span>{$CATEGORYS[20][catname]}</span></a></li>
+    </ul>
+</div>
+<div class="index_bt1 fix">
+    <i></i>
+    <h3>公司简介</h3>
+</div>
+<div class="index_about fix">
+
+    {pc:get sql="SELECT * FROM v9_page where catid=11"}
+    {loop $data $val}
+    {$val[content]}
+    {/loop}
+    {/pc}
+</div>
+<div class="index_bt2 fix">
+    <img src="{$CATEGORYS[12][image]}"/>
+    <h3>{$CATEGORYS[12][catname]}</h3>
+    <a href="{$CATEGORYS[12][url]}">更多</a>
+</div>
+<div class="index_brand fix">
+    <ul>
+        {pc:content action="lists"  catid="12" num="9" order="listorder DESC,inputtime desc" }
+        {loop $data $v}
+        <li>
+            <a href="{$v[url]}"><i><img src="{$v[thumb]}"/></i><span>{$v[title]}</span></a>
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+<div class="index_bt2 fix">
+    <img src="{$CATEGORYS[13][image]}"/>
+    <h3>{$CATEGORYS[13][catname]}</h3>
+    <a href="{$CATEGORYS[13][url]}">更多</a>
+</div>
+<div class="index_brand fix">
+    <ul>
+        {pc:content action="lists"  catid="13" num="9" order="listorder DESC,inputtime desc" }
+
+        {loop $data $v}
+        <li>
+            <a href="{$v[url]}"><i><img src="{$v[thumb]}"/></i><span>{$v[title]}</span></a>
+        </li>
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+<div class="index_bt1 fix">
+    <i></i>
+    <h3>服务项目</h3>
+    <a href="#">更多</a>
+</div>
+<div class="index_project fix">
+    <ul>
+        <li><a href="{$CATEGORYS[15][url]}"><img src="{$CATEGORYS[15][image]}"/></a></li>
+        <li><a href="{$CATEGORYS[16][url]}"><img src="{$CATEGORYS[16][image]}"/></a></li>
+    </ul>
+    <ul>
+        <li><a href="{$CATEGORYS[17][url]}"><img src="{$CATEGORYS[17][image]}"/></a></li>
+    </ul>
+</div>
+<div class="index_bt1 fix">
+    <i></i>
+    <h3>寄售流程</h3>
+</div>
+<div class="index_process fix">
+    <img src="/template/images/process_tp.png"/>
+</div>
+<div class="index_bt1 fix">
+    <i></i>
+    <h3>{$CATEGORYS[18][catname]}</h3>
+    <a href="{$CATEGORYS[18][url]}">更多</a>
+</div>
+<div class="index_Appraisal fix">
+    <ul>
+        {pc:content action="lists"  catid="18" num="3" order="listorder DESC,inputtime desc" }
+        {loop $data $v}
+        <li>
+            <a href="{$v[url]}" class="tbox">
+                <div><i><img src="{$v[thumb]}"/></i></div>
+                <div class="index_Appraisalcn">
+                    <h3>{$v[title]}</h3>
+                    <span>{date("Y-m-d",$v[inputtime])}</span>
+                </div>
+            </a>
+        </li>
+
+        {/loop}
+        {/pc}
+    </ul>
+</div>
+<div class="wall fix"></div>
+
+{template "content","footer"}

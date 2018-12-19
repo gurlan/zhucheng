@@ -1,0 +1,36 @@
+{template "content","head"}
+{template "content","position"}
+    <div class="main w1200 fix">
+        {template "content","nav"}
+        <div class="news mian_right rt">
+            <h3>公司动态</h3>
+            <ul class="fix news_ul">
+                {pc:content action="lists" catid="$catid" num="4" order="listorder ASC,inputtime desc" page="$page"}
+                {loop $data $r}
+                <li class="fix">
+                    <a href="{$r[url]}">
+                        <div class="news_left le">
+                            <b>{date("d",$r[inputtime])}</b>
+                            <span>{date("Y/m",$r[inputtime])}</span>
+                        </div>
+                        <div class="news_main le">
+                            <img src="{$r[thumb]}">
+                        </div>
+                        <div class="news_right le">
+                            <h4>{$r[title]}</h4>
+                            <p>
+                                {$r[description]}
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                {/loop}
+            </ul>
+            <div class="link">
+                <ul class="fix">
+                {$pages}
+                </ul>
+            </div>
+        </div>
+    </div>
+{template "content","foot"}
