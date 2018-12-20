@@ -11,7 +11,7 @@
                 <ul class="sub">
                     {pc:content action="category" catid="$r['catid']" num="25" siteid="$siteid" order="listorder ASC"}
                     {loop $data $v}
-                    <li><a href="{$l[url]}">{$l[catname]}</a></li>
+                    <li><a href="{$v[url]}">{$v[catname]}</a></li>
                     {/loop}
                     {/pc}
                 </ul>
