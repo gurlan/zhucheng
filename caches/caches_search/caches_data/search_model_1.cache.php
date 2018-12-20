@@ -1,5 +1,11 @@
 <?php
 return array (
+  12 => 
+  array (
+    'typeid' => '53',
+    'name' => '配置模型',
+    'sort' => '0',
+  ),
   1 => 
   array (
     'typeid' => '1',

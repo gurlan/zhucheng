@@ -1,11 +1,11 @@
-{template "content","head"}
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","head"); ?>
 <body>
-{template "content","logo"}
+<?php include template("content","logo"); ?>
 <div class="content w1200 fix">
     <!--content_left-->
     <div class="content_left">
         <!--position-->
-        {template "content","position"}
+        <?php include template("content","position"); ?>
         <!--Contact-->
         <div class="Contact distance fix">
             <div class="Contact_tm fix"><h3>联系方式</h3></div>
@@ -14,22 +14,22 @@
             </div>
             <div class="Contact_nr fix">
                 <div class="Contact_tel">
-                    {$content}
+                    <?php echo $content;?>
                 </div>
                 <div class="Contact_wx">
                     <ul>
-                        <li><i><img src="{$sys[qrcode_a]}"/></i><span>筑城资本</span></li>
-                        <li><i><img src="{$sys[qrcode_b]}"/></i><span>增益通科技</span></li>
+                        <li><i><img src="<?php echo $sys['qrcode_a'];?>"/></i><span>筑城资本</span></li>
+                        <li><i><img src="<?php echo $sys['qrcode_b'];?>"/></i><span>增益通科技</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!--content_right-->
-    {template "content","right"}
+    <?php include template("content","right"); ?>
 </div>
 
-{template "content","foot"}
+<?php include template("content","foot"); ?>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=56srZYI3vAB9XzW2B0u544hHhsdWdE7X"></script>
 
 <script type="text/javascript">

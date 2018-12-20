@@ -12,8 +12,8 @@
             <ul>
                 {pc:content action="lists" catid="$catid" num="8" order="listorder DESC,inputtime desc" page="$page"}
                 {loop $data $r}
-                <li><a href="{$r[url]}"><i><img src="{$r[thumb]}"/></i><span>{$r[title]}</span>
-                    <p>【{date("Y-m-D",$r[inputtime])}】</p></a>
+                <li><a href="{$r[url]}"><i><img src="/template/images/party_tb1.jpg"/></i><span>{$r[title]}</span>
+                    <p>【{date("Y-m-d",$r[inputtime])}】</p></a>
                 </li>
                 {/loop}
             </ul>

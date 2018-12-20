@@ -17,7 +17,7 @@
     <div class="nav" id="nav">
         <ul>
                                     <li class="nLi">
-                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=21"><span>关于我们</span></a></h3>
+                <h3 onclick="redi(this)"><a href="javascript:" ><span>关于我们</span></a></h3>
                 <ul class="sub">
                                                             <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=22">公司简介</a></li>
                                         <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=23">业务范围</a></li>
@@ -26,14 +26,14 @@
                                                         </ul>
             </li>
                         <li class="nLi">
-                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=26"><span>资讯</span></a></h3>
+                <h3 onclick="redi(this)"><a href="javascript:" ><span>资讯</span></a></h3>
                 <ul class="sub">
                                                             <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=27">公司新闻</a></li>
                                         <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=28">行业动态</a></li>
                                                         </ul>
             </li>
                         <li class="nLi">
-                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=29"><span>党建学习</span></a></h3>
+                <h3 onclick="redi(this)"><a href="javascript:" ><span>党建学习</span></a></h3>
                 <ul class="sub">
                                                             <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=32">支部概括</a></li>
                                         <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=36">支部荣誉</a></li>
@@ -41,7 +41,7 @@
                                                         </ul>
             </li>
                         <li class="nLi">
-                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=33"><span>联系我们</span></a></h3>
+                <h3 onclick="redi(this)"><a href="javascript:" ><span>联系我们</span></a></h3>
                 <ul class="sub">
                                                             <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=34">联系方式</a></li>
                                         <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=35">招聘信息</a></li>
@@ -51,7 +51,10 @@
     </div>
 </div>
 <script id="jsID" type="text/javascript">
-
+    function redi(obj){
+        var url = $(obj).next().find('a:first').attr('href');
+        window.location.href = url;
+    }
     jQuery("#nav").slide({
         type: "menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
         titCell: ".nLi", //鼠标触发对象
