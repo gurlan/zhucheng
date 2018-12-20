@@ -10,7 +10,7 @@
         <div class="honner distance fix">
             <h3>{$CATEGORYS[$catid][catname]}</h3>
             <ul>
-                {pc:content action="lists" catid="$catid" num="9" order="listorder DESC,inputtime desc" page="$page"}
+                {pc:content action="lists" catid="$catid" num="6" order="listorder DESC,inputtime desc" page="$page"}
                 {php $i=1}
                 {loop $data $r}
                 <li  {if $i%3==1}class="honner_list"{/if}><i><img src="{$r[thumb]}"/></i><span>{$r[title]}</span>

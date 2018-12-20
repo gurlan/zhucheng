@@ -104,6 +104,8 @@ i,s,em,u{font-style:normal;text-decoration:none;}
 .page a{ display:inline-block; height:36px; line-height:36px; border:1px solid #eeeeee; padding:0px 15px; font-size:14px; margin:0px 5px;}
 .page a:hover{background:#d80816; border:1px solid #d80816; color:#fff}
 .page a.on{background:#d80816; border:1px solid #d80816; color:#fff}
+.page span.on{background:#d80816; border:1px solid #d80816; color:#fff}
+
 /*news*/
 .news{ width:100%; margin-bottom:60px;}
 .news h3{ float:left; width:100%; font-size:14px; color:#000000; font-size:20px; line-height:30px;}

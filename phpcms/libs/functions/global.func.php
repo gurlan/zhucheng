@@ -742,32 +742,32 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 		}
 		$multipage .= '<span>'.$num.L('page_item').'</span>';
 		if($curr_page>0) {
-			$multipage .= ' <span><a href="'.pageurl($urlrule, $curr_page-1, $array).'" >'.L('previous').'</a></span>';
+			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" >'.L('previous').'</a>';
 			if($curr_page==1) {
-				$multipage .= ' <span class="on">1</span>';
+				$multipage .= ' <a class="on">1</a>';
 			} elseif($curr_page>6 && $more) {
-				$multipage .= '<span> <a href="'.pageurl($urlrule, 1, $array).'">1</a><span> ..';
+				$multipage .= '<a href="'.pageurl($urlrule, 1, $array).'">1</a> ..';
 			} else {
-				$multipage .= ' <span> <a href="'.pageurl($urlrule, 1, $array).'">1</a></span>';
+				$multipage .= ' <a href="'.pageurl($urlrule, 1, $array).'">1</a>';
 			}
 		}
 		for($i = $from; $i <= $to; $i++) {
 			if($i != $curr_page) {
-				$multipage .= ' <span> <a href="'.pageurl($urlrule, $i, $array).'">'.$i.'</a></span>';
+				$multipage .= ' <a href="'.pageurl($urlrule, $i, $array).'">'.$i.'</a>';
 			} else {
-				$multipage .= ' <span class="on">'.$i.'</span>';
+				$multipage .= ' <a class="on">'.$i.'</a>';
 			}
 		}
 		if($curr_page<$pages) {
 			if($curr_page<$pages-5 && $more) {
-				$multipage .= ' ..<span><a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> </span><span><a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a></span>';
+				$multipage .= ' ..<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> </span><a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 			} else {
-				$multipage .= ' <span><a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a></span><span> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a></span>';
+				$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a><a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 			}
 		} elseif($curr_page==$pages) {
-			$multipage .= ' <span class="on">'.$pages.'</span> <span><a href="'.pageurl($urlrule, $curr_page, $array).'" class="a1">'.L('next').'</a></span>';
+			$multipage .= ' <a class="on">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page, $array).'" class="a1">'.L('next').'</a>';
 		} else {
-			$multipage .= '<span> <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a></span><span><a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a></span> ';
+			$multipage .= '<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a><a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a> ';
 		}
 	}
 	return $multipage;

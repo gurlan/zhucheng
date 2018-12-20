@@ -1,13 +1,14 @@
 {template "content","head"}
 <body>
 <div class="index w1200 fix">
-    <div class="logo"><a href="index.html"><img src="/template/images/logo.jpg"/></a></div>
+    <div class="logo"><a href="/"><img src="/template/images/logo.jpg"/></a></div>
     <div class="nav" id="nav">
         <ul>
+            {php $i=1}
             {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
             {loop $data $r}
             <li class="nLi">
-                <h3 onclick="redi(this)"><a href="javascript:" ><span>{$r[catname]}</span></a></h3>
+                <h3 onclick="redi(this)"><a href="javascript:" ><img src="/template/images/nav_bt{$i}.png"/><span>{$r[catname]}</span></a></h3>
                 <ul class="sub">
                     {pc:content action="category" catid="$r['catid']" num="25" siteid="$siteid" order="listorder ASC"}
                     {loop $data $v}
@@ -16,6 +17,7 @@
                     {/pc}
                 </ul>
             </li>
+            {$i++}
             {/loop}
             {/pc}
         </ul>

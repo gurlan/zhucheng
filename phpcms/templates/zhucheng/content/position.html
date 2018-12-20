@@ -1,3 +1,6 @@
 <div class="position fix">
-    <i><img src="/template/images/position_tb.png"/></i><span>当前位置：</span>{catpos($catid)}
+    <i><img src="/template/images/position_tb.png"/></i><span>当前位置：</span><a href="/">首页 </a> >{catpos($catid)}
 </div>
+<script>
+    $('.position a:last').addClass('on')
+</script>
