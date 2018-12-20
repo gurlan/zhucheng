@@ -235,3 +235,19 @@
 <?php exit;?>12-19 22:15:59 | 2 | chmod(): Operation not permitted | phpcms/modules/formguide/classes/formguide.class.php | 35
 <?php exit;?>12-19 22:16:04 | 2 | file_put_contents(/www/wwwroot/tiger/index.html): failed to open stream: Permission denied | phpcms/modules/content/classes/html.class.php | 363
 <?php exit;?>12-19 22:16:04 | 2 | chmod(): Operation not permitted | phpcms/modules/content/classes/html.class.php | 364
+<?php exit;?>12-20 13:11:33 | 2 | Missing argument 2 for category::delete_child(), called in D:\phpStudy\PHPTutorial\WWW\zhucheng\phpcms\modules\admin\category.php on line 351 and defined | phpcms\modules\admin\category.php | 346
+<?php exit;?>12-20 13:20:37 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-20 13:20:36 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-20 13:21:00 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-20 13:21:00 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-20 13:21:27 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-20 13:21:27 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-20 13:22:07 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-20 13:22:07 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+) | phpcms\libs\classes\http.class.php | 84
+<?php exit;?>12-20 13:23:00 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>12-20 13:23:00 | 2 | fsockopen(): unable to connect to tool.phpcms.cn:80 (������ӷ���һ��ʱ���û���ȷ�𸴻�ӵ����û�з�Ӧ�����ӳ���ʧ�ܡ�
+) | phpcms\libs\classes\http.class.php | 84

@@ -1,0 +1,52 @@
+{template "content","head"}
+<body>
+{template "content","logo"}
+<div class="content w1200 fix">
+    <!--content_left-->
+    <div class="content_left">
+        <!--position-->
+        {template "content","position"}
+        <!--honner-->
+        <div class="honner distance fix">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul>
+                {pc:content action="lists" catid="$catid" num="9" order="listorder DESC,inputtime desc" page="$page"}
+                {php $i=1}
+                {loop $data $r}
+                <li  {if $i%3==1}class="honner_list"{/if}><i><img src="{$r[thumb]}"/></i><span>{$r[title]}</span>
+                    <div class="honner_sm"><img src="/template/images/honner_tb2.png"/></div>
+                </li>
+                {php $i++}
+                {/loop}
+
+            </ul>
+        </div>
+        <!--page-->
+        <div class="page fix">
+            {$pages}
+        </div>
+    </div>
+    <div class="honner_tk fix">
+        <div class="honner_tkcn fix">
+            <div class="honner_tkgb fix"><img src="/template/images/honner_tb1.png"/></div>
+            <div class="honner_tknr fix"><img src=""/></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $(".honner li").click(function () {
+                var img = $(this).children("i").find("img").attr("src");
+                var img1 = $(".honner_tknr").find("img").attr("src");
+                $(".honner_tk").show();
+                $(".honner_tknr img").attr("src", img);
+            });
+            $(".honner_tkgb").click(function () {
+                $(".honner_tk").hide();
+            });
+        });
+    </script>
+    <!--content_right-->
+    {template "content","right"}
+</div>
+
+{template "content","foot"}

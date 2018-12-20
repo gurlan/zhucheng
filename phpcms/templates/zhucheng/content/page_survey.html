@@ -1,0 +1,18 @@
+{template "content","head"}
+<body>
+{template "content","logo"}
+<div class="content w1200 fix">
+    <!--content_left-->
+    <div class="content_left">
+        <!--position-->
+        {template "content","position"}
+        <!--about-->
+        <div class="Survey distance fix">
+            <h3>{$title}</h3>
+            {$content}
+        </div>
+    </div>
+    <!--content_right-->
+    {template "content","right"}
+</div>
+{template "content","foot"}

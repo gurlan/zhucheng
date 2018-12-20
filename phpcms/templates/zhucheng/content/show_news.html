@@ -1,0 +1,35 @@
+{template "content","head"}
+<body>
+{template "content","logo"}
+<div class="content w1200 fix">
+    <!--content_left-->
+    <div class="content_left">
+        <!--position-->
+        {template "content","position"}
+        <!--news-->
+        <div class="news_nr distance fix">
+            <div class="news_tm fix"><h3>{$title}</h3></div>
+            <div class="news_date fix"><span>来源：{$copyfrom}</span><span>作者：{$author}</span><span>时间：{$inputtime}</span><span  id="hits"></span></div>
+            <div class="news_xq fix">
+               {$content}
+            </div>
+            <div class="Article fix">
+                <a href="{$previous_page[url]}"><span>上一篇：</span>{$previous_page[title]}</a>
+                <a href="{$next_page[url]}"><span>下一篇：</span>{$next_page[title]}</a>
+            </div>
+
+        </div>
+        <!--page-->
+        <div class="page fix">
+            {$pages}
+        </div>
+    </div>
+    <!--content_right-->
+    {template "content","right"}
+</div>
+
+{template "content","foot"}
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+<script>
+    $('#hits').append('次浏览')
+</script>

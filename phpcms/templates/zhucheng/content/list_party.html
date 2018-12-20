@@ -1,0 +1,30 @@
+{template "content","head"}
+<body>
+{template "content","logo"}
+<div class="content w1200 fix">
+    <!--content_left-->
+    <div class="content_left">
+        <!--position-->
+        {template "content","position"}
+        <!--news-->
+        <div class="party distance fix">
+            <h3>{$CATEGORYS[$catid][catname]}</h3>
+            <ul>
+                {pc:content action="lists" catid="$catid" num="8" order="listorder DESC,inputtime desc" page="$page"}
+                {loop $data $r}
+                <li><a href="{$r[url]}"><i><img src="{$r[thumb]}"/></i><span>{$r[title]}</span>
+                    <p>【{date("Y-m-D",$r[inputtime])}】</p></a>
+                </li>
+                {/loop}
+            </ul>
+        </div>
+        <!--page-->
+        <div class="page fix">
+            {$pages}
+        </div>
+    </div>
+    <!--content_right-->
+    {template "content","right"}
+</div>
+
+{template "content","foot"}

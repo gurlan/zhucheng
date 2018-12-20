@@ -112,7 +112,7 @@ return array (
     'pattern' => '',
     'errortips' => '',
     'formtype' => 'text',
-    'setting' => '{"size":"50","defaultvalue":"\\u5c0f\\u864e\\u540d\\u54c1","ispassword":"0"}',
+    'setting' => '{"size":"50","defaultvalue":"\\u7b51\\u57ce\\u878d\\u521b","ispassword":"0"}',
     'formattribute' => '',
     'unsetgroupids' => '',
     'unsetroleids' => '',
@@ -128,7 +128,7 @@ return array (
     'disabled' => '0',
     'isomnipotent' => '0',
     'size' => '50',
-    'defaultvalue' => '小虎名品',
+    'defaultvalue' => '筑城融创',
     'ispassword' => '0',
   ),
   'keywords' => 

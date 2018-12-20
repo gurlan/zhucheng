@@ -1,0 +1,20 @@
+<div class="content_right">
+    <div class="menue fix">
+        <ul>
+            {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+            {loop $data $r}
+            <li class="nLi">
+                <h3><a href="{$r[url]}"><span>{$r[catname]}</span></a></h3>
+                <ul class="sub">
+                    {pc:content action="category" catid="$r['catid']" num="25" siteid="$siteid" order="listorder ASC"}
+                    {loop $data $v}
+                    <li><a href="{$l[url]}">{$l[catname]}</a></li>
+                    {/loop}
+                    {/pc}
+                </ul>
+            </li>
+            {/loop}
+            {/pc}
+        </ul>
+    </div>
+</div>
