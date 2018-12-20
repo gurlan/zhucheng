@@ -2,220 +2,71 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>小虎名品</title>
+    <title>筑城融创</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="筑城融创"/>
+    <meta name="description" content="筑城融创">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
     <link href="/template/css/style.css" rel="stylesheet" type="text/css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="keywords" content="小虎名品"/>
-    <meta name="description" content="小虎名品">
     <script type="text/javascript" src="/template/js/jquery1.42.min.js"></script>
     <script type="text/javascript" src="/template/js/jquery.SuperSlide.2.1.1.js"></script>
-    <script type="text/javascript" src="/template/js/TouchSlide.1.0.js"></script>
 </head><body>
-<!--banner-->
-<div class="banner fix" id="banner">
-    <div class="hd">
+<div class="index w1200 fix">
+    <div class="logo"><a href="index.html"><img src="/template/images/logo.jpg"/></a></div>
+    <div class="nav" id="nav">
         <ul>
-                                    <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-    </div>
-    <div class="bd">
-        <ul>
-                        <li><a href=""><img src="http://shop.com/uploadfile/2018/1219/20181219061921570.jpg" /></a></li>
-                        <li><a href=""><img src="http://shop.com/uploadfile/2018/1219/20181219061921570.jpg" /></a></li>
-                        <li><a href=""><img src="http://shop.com/uploadfile/2018/1219/20181219061921570.jpg" /></a></li>
-                    </ul>
+                                    <li class="nLi">
+                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=21"><span>关于我们</span></a></h3>
+                <ul class="sub">
+                                                            <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=22">公司简介</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=23">业务范围</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=24">价值理念</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=25">资质荣誉</a></li>
+                                                        </ul>
+            </li>
+                        <li class="nLi">
+                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=26"><span>资讯</span></a></h3>
+                <ul class="sub">
+                                                            <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=27">公司新闻</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=28">行业动态</a></li>
+                                                        </ul>
+            </li>
+                        <li class="nLi">
+                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=29"><span>党建学习</span></a></h3>
+                <ul class="sub">
+                                                            <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=32">支部概括</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=36">支部荣誉</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=37">支部活动</a></li>
+                                                        </ul>
+            </li>
+                        <li class="nLi">
+                <h3><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=33"><span>联系我们</span></a></h3>
+                <ul class="sub">
+                                                            <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=34">联系方式</a></li>
+                                        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=35">招聘信息</a></li>
+                                                        </ul>
+            </li>
+                                </ul>
     </div>
 </div>
-<script type="text/javascript">
-    TouchSlide({
-        slideCell: "#banner",
-        titCell: ".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
-        mainCell: ".bd ul",
-        effect: "left",
-        autoPlay: true,//自动播放
-        autoPage: true, //自动分页
-        switchLoad: "_src" //切换加载，真实图片路径为"_src"
+<script id="jsID" type="text/javascript">
+
+    jQuery("#nav").slide({
+        type: "menu",// 效果类型，针对菜单/导航而引入的参数（默认slide）
+        titCell: ".nLi", //鼠标触发对象
+        targetCell: ".sub", //titCell里面包含的要显示/消失的对象
+        effect: "slideDown", //targetCell下拉效果
+        delayTime: 300, //效果时间
+        triggerTime: 0, //鼠标延迟触发时间（默认150）
+        returnDefault: true //鼠标移走后返回默认状态，例如默认频道是“预告片”，鼠标移走后会返回“预告片”（默认false）
     });
 </script>
-<div class="index_nav fix">
-    <ul>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=9"><i><img src="http://shop.com/uploadfile/2018/1219/20181219065710399.png"/></i><span>行业资讯</span></a></li>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=10"><i><img src="http://shop.com/uploadfile/2018/1219/20181219065736772.png"/></i><span>联系我们</span></a></li>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=20"><i><img src="http://shop.com/uploadfile/2018/1219/20181219065755696.png"/></i><span>一键导航</span></a></li>
-    </ul>
-</div>
-<div class="index_bt1 fix">
-    <i></i>
-    <h3>公司简介</h3>
-</div>
-<div class="index_about fix">
-
-            <span>小虎名品自2015年成立以来，致力服务于广大高端客户群体，一单生意交一个朋友，诚信第一原则服务好每一位客户！</span>
-<p>奢饰品回收 名表 钻石 名包</p>
-<p>寄卖</p>
-<p>鉴定</p>
-        </div>
-<div class="index_bt2 fix">
-    <img src="http://shop.com/uploadfile/2018/1219/20181219070115257.png"/>
-    <h3>名表品牌</h3>
-    <a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=12">更多</a>
-</div>
-<div class="index_brand fix">
-    <ul>
-                        <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=1"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=2"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=3"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=4"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=5"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=6"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=7"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=8"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=12&id=9"><i><img src="http://shop.com/uploadfile/2018/1219/20181219070510763.jpg"/></i><span>百达翡丽</span></a>
-        </li>
-                    </ul>
-</div>
-<div class="index_bt2 fix">
-    <img src="http://shop.com/uploadfile/2018/1219/20181219070131231.png"/>
-    <h3>钻石品牌</h3>
-    <a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=13">更多</a>
-</div>
-<div class="index_brand fix">
-    <ul>
-        
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=21"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=22"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=23"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=24"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=25"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=26"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=27"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=28"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=13&id=29"><i><img src="http://shop.com/uploadfile/2018/1219/20181219071021602.jpg"/></i><span>I DO</span></a>
-        </li>
-                    </ul>
-</div>
-<div class="index_bt1 fix">
-    <i></i>
-    <h3>服务项目</h3>
-    <a href="#">更多</a>
-</div>
-<div class="index_project fix">
-    <ul>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=15"><img src="http://shop.com/uploadfile/2018/1219/20181219071229306.jpg"/></a></li>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=16"><img src="http://shop.com/uploadfile/2018/1219/20181219071242922.jpg"/></a></li>
-    </ul>
-    <ul>
-        <li><a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=17"><img src="http://shop.com/uploadfile/2018/1219/20181219071255203.jpg"/></a></li>
-    </ul>
-</div>
-<div class="index_bt1 fix">
-    <i></i>
-    <h3>寄售流程</h3>
-</div>
-<div class="index_process fix">
-    <img src="/template/images/process_tp.png"/>
-</div>
-<div class="index_bt1 fix">
-    <i></i>
-    <h3>鉴宝中心</h3>
-    <a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=18">更多</a>
-</div>
-<div class="index_Appraisal fix">
-    <ul>
-                        <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=18&id=38" class="tbox">
-                <div><i><img src="http://shop.com/uploadfile/2018/1219/20181219071634243.jpg"/></i></div>
-                <div class="index_Appraisalcn">
-                    <h3>教你如何保养我们的爱表赶快来学习吧！</h3>
-                    <span>2018-12-19</span>
-                </div>
-            </a>
-        </li>
-
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=18&id=39" class="tbox">
-                <div><i><img src="http://shop.com/uploadfile/2018/1219/20181219071634243.jpg"/></i></div>
-                <div class="index_Appraisalcn">
-                    <h3>教你如何保养我们的爱表赶快来学习吧！</h3>
-                    <span>2018-12-19</span>
-                </div>
-            </a>
-        </li>
-
-                <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=show&catid=18&id=40" class="tbox">
-                <div><i><img src="http://shop.com/uploadfile/2018/1219/20181219071634243.jpg"/></i></div>
-                <div class="index_Appraisalcn">
-                    <h3>教你如何保养我们的爱表赶快来学习吧！</h3>
-                    <span>2018-12-19</span>
-                </div>
-            </a>
-        </li>
-
-                    </ul>
-</div>
-<div class="wall fix"></div>
-
-<div class="footer fix">
-    <ul>
-        <li  class="on">
-            <a href="/">
-                <i class="footer_tb1"></i>
-                <span>首页</span>
-            </a>
-        </li>
-        <li>
-            <a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=19" >
-                <i class="footer_tb2"></i>
-                <span>维修保养</span>
-            </a>
-        </li>
-        <li >
-            <a href="http://shop.com/index.php?m=content&c=index&a=lists&catid=10">
-                <i class="footer_tb3"></i>
-                <span>联系我们</span>
-            </a>
-        </li>
-    </ul>
+<div class="footer w1200 fix">
+    <a href="#">筑城资本</a>
+    <a href="#">增益通科技</a>
+    <a href="#">筑城融创</a>
+    <a href="#">河北铭融</a>
 </div>
 </body>
 </html>
